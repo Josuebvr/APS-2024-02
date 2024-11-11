@@ -11,6 +11,8 @@ while True:
 
     if not verificador:
         break
+
+    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     
     lista_rostos = reconhecedor_rostos.process(frame)
 
@@ -23,5 +25,5 @@ while True:
     if cv2.waitKey(5) == 27:
         break
 
-webcam.release()
+camera.release()
 cv2.destroyAllWindows()
